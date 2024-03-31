@@ -20,7 +20,7 @@ public class Member {
     @Embedded
     private Address address;
 
-    @OneToMany
+    @OneToMany(mappedBy = "member") // order에 있는 member에 mapping됐다는 의미.
     private List<Order> orders = new ArrayList<>();
 
 }
