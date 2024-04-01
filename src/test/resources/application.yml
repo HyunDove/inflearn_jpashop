@@ -1,12 +1,9 @@
+# test에서는 test-resources를 우선권으로 가진다.
+# in-memory를 지원하기때문에, 별도 h2 설치 없이, 테스트가 가능하다.
+# 하단 spring ~ logging 전까지 내용이 없어도 된다.
 spring:
-  h2:
-    console:
-      enabled: true
   datasource:
-    # jdbc:h2:~/jpashop 최소 한번 실행 후
-    # ~/jpashop.mv.db 파일이 정상적으로 생성됐는지 확인
-    # 이후 부터는 jdbc:h2:tcp://localhost/~/jpashop tcp로 접속한다.
-    url: jdbc:h2:tcp://localhost/~/jpashop
+    url: jdbc:h2:mem:test
     username: sa
     password:
     driver-class-name: org.h2.Driver
