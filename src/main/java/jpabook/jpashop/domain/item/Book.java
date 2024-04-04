@@ -9,7 +9,6 @@ import lombok.Setter;
 @DiscriminatorValue("B") // 구분 키 값 지정
 @Getter @Setter
 public class Book extends Item{
-
     private String author;
     private String isbn;
 }
